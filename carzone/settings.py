@@ -117,5 +117,8 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
+os
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]  # Ensure the static folder is included
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # This is for `collectstatic`
